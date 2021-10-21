@@ -1,32 +1,17 @@
+import { precacheAndRoute } from 'workbox-precaching';
+import { registerRoute } from 'workbox-routing';
+import { NetworkFirst } from 'workbox-strategies';
 
 // @ts-ignore
 const PACKAGED_FILES = __WB_MANIFEST;
 
+const API_CACHE = 'API_CACHE';
 
+precacheAndRoute(PACKAGED_FILES);
 
-// const sw: any = self as ServiceWorkerGlobalScope & typeof globalThis;
-
-// const x = self.__WB_MANIFEST;
-
-// import {precacheAndRoute} from 'workbox-precaching';
-// Your other import statements go here.
-
-// precacheAndRoute(self.__WB_MANIFEST);
-
-// const CACHE_VERSION = 'v1.0.1';
-// const CACHE_FILES = [];
-
-// self.addEventListener('install', (event: any) => {
-//     console.log("Installed")
-// });
-
-// self.addEventListener('activate', (event: any) => {
-//     console.log("Installed")
-// });
-
-// self.addEventListener('fetch', (event: any) => {
-//     undefined;
-// });
+registerRoute(({ url }) => {
+    return url.hostname.startsWith('content.guardianapis.com');
+}, new NetworkFirst({ cacheName: API_CACHE }));
 
 /*
  *  https://developers.google.com/web/ilt/pwa/lab-caching-files-with-service-worker

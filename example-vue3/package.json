@@ -13,6 +13,7 @@
     "http-server": "^13.0.2",
     "register-service-worker": "^1.7.1",
     "vue": "^3.0.0",
+    "vue-promised": "^2.2.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0",
     "workbox-webpack-plugin": "^6.3.0"
