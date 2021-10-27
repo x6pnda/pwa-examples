@@ -2,10 +2,9 @@ import { precacheAndRoute } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
 import { NetworkFirst } from 'workbox-strategies';
 
-// @ts-ignore
 const PACKAGED_FILES = __WB_MANIFEST;
 
-const API_CACHE = 'API_CACHE';
+const API_CACHE: string = 'API_CACHE';
 
 precacheAndRoute(PACKAGED_FILES);
 
