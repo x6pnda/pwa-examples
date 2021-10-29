@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/57238882/angular-using-typescript-for-service-worker-serviceworkermodule/59803735#59803735
+https://stackoverflow.com/questions/49442169/how-to-add-custom-code-to-angular-cli-generated-service-worker
