@@ -1,0 +1,10 @@
+.statusShower {
+  padding: 2rem 0;
+  justify-content: center;
+  p {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $dark1;
+    border-bottom: 4px solid $theme1;
+  }
+}
