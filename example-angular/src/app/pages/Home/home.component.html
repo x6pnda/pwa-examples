@@ -1,0 +1,11 @@
+<ng-container>
+    <network-status></network-status>
+    <div class="newsList">
+        <p *ngIf="loadingHeadlines">Loading...</p>
+        <ng-container *ngIf="!loadingHeadlines && !headlineError && headlines !== undefined">
+            <news-item *ngFor="let item of headlines.response.results" [item]="item" [index]="2">
+            </news-item>
+        </ng-container>
+        <p *ngIf="headlineError">Error: {{ headlineError }}</p>
+    </div>
+</ng-container>
